@@ -1,0 +1,203 @@
+.app {
+  .users-table-container {
+    overflow-x: auto;
+    box-shadow: var(--shadow);
+    border-radius: 0.6rem;
+    .users-table {
+      border-spacing: 0;
+      text-transform: capitalize;
+      min-width: 35rem;
+      width: 100%;
+      border-collapse: collapse;
+      background-color: var(--bg);
+      tr {
+        border-radius: 0.6rem;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: var(--s-1);
+      }
+      .user-table-profile {
+        display: flex;
+        align-items: center;
+        img {
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+        }
+        div {
+          margin-left: 15px;
+        }
+        p {
+          margin: 0;
+          color: grey;
+        }
+      }
+
+      &__head {
+        background-color: var(--table-header-bg);
+      }
+
+      &__body {
+        tr:not(:last-child) {
+          border-bottom-style: groove;
+          border-width: 1px;
+          border-color: var(--greyish);
+        }
+      }
+    }
+  }
+
+  .user-tile-container {
+    .card {
+      margin-bottom: var(--s-1);
+      background-color: var(--bg);
+      box-shadow: var(--shadow);
+      padding: var(--s-1) var(--s-0_75);
+      border-radius: 0.4rem;
+    }
+
+    .user-cards__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+      grid-gap: var(--s-1);
+      .user-card {
+        display: flex;
+        justify-content: center;
+        border: 2px solid #555;
+        box-shadow: var(--shadow);
+      }
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-top: 20px;
+      }
+      .card-content {
+        margin-left: 15px;
+        .user-email {
+          color: grey;
+        }
+      }
+    }
+  }
+
+  .layout-switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: var(--s-0_75);
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+      input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .switch-label {
+        width: fit-content;
+        height: 40px;
+        position: absolute;
+        top: 10px;
+        right: 66px;
+        text-align: center;
+        font-size: 14px;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #00db57;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        &:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+        }
+      }
+      input:checked + .slider {
+        background-color: #ccc;
+      }
+
+      input:focus + .slider {
+        box-shadow: 0 0 1px #ccc;
+      }
+
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+  }
+  .filters {
+    input[type="search"] {
+      width: 30%;
+      margin: 0;
+      font-size: 14px;
+      color: inherit;
+      border: 1px solid transparent;
+      border-radius: inherit;
+      border: 2px solid #555;
+      border-radius: 17px;
+      padding: 9px 4px 9px 40px;
+      background: transparent
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+        no-repeat 13px center;
+    }
+
+    input[type="search"]:focus {
+      box-shadow: 0 0 3px 0 grey;
+      border-color: grey;
+      outline: none;
+    }
+    input[name="all"] {
+      margin-left: 10px;
+    }
+
+    label {
+      margin-left: 20px;
+    }
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 30px 0px;
+
+    button {
+      background: transparent;
+      border: none;
+      width: 80px;
+      cursor: pointer;
+      padding: 15px 0px;
+    }
+    .active {
+      border-top: 2px solid blue;
+    }
+  }
+}

@@ -64,7 +64,6 @@ function App() {
 
     if (!!userGender) {
       filteredUserList = filteredUserList.filter(({ gender }: any) => {
-        console.log(userGender, gender);
         if (["male", "female"].includes(userGender)) {
           return gender.toLowerCase() === userGender.toLowerCase();
         } else {

@@ -186,6 +186,10 @@
       border-color: grey;
       outline: none;
     }
+    input[type="radio"] {
+      margin-right: 5px;
+      accent-color: black;
+    }
     input[name="all"] {
       margin-left: 10px;
     }

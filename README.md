@@ -7,6 +7,12 @@
 3. Run `npm install`
 4. Run `npm start` project will be up and running at localhost:3000
 
+# Technology I have used
+
+1. `create-react-app` react app bundler
+2. `scss` for writing css rules,
+3. `typeScript` instead of javascript
+
 # Improvements
 
 1. As per design i did not do any responsive design works. That would be a great thing to improve.

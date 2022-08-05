@@ -16,9 +16,6 @@ const DEFAULT_RESPONSE_STATE = {
   data: null,
 };
 
-/**
- * @param endpoint endpoint to fetch data from.
- */
 export function useFetch<T>(endpoint: string): FetchResponseData<T> {
   const [response, setResponse] = useState<Response<T>>(DEFAULT_RESPONSE_STATE);
   const [error, setError] = useState(null);

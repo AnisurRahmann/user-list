@@ -190,7 +190,7 @@
       margin-left: 10px;
     }
 
-    label {
+    label:not(:first-child) {
       margin-left: 20px;
     }
   }

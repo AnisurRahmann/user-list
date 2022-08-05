@@ -1,7 +1,6 @@
 .app {
   .users-table-container {
     overflow-x: auto;
-    box-shadow: var(--shadow);
     border-radius: 0.6rem;
     .users-table {
       border-spacing: 0;
@@ -31,18 +30,25 @@
         }
         p {
           margin: 0;
-          color: grey;
+          font-weight: bold;
+          &:nth-child(2) {
+            font-weight: normal;
+            color: grey;
+          }
         }
       }
 
       &__head {
-        background-color: var(--table-header-bg);
+        background-color: var(--greyish);
+        border: 2px solid var(--greyish);
+        border-radius: 50px;
       }
 
       &__body {
+        border: 2px solid var(--greyish);
         tr:not(:last-child) {
           border-bottom-style: groove;
-          border-width: 1px;
+          border-width: 0.5px;
           border-color: var(--greyish);
         }
       }
@@ -76,8 +82,14 @@
       }
       .card-content {
         margin-left: 15px;
-        .user-email {
-          color: grey;
+        p {
+          &:nth-child(1) {
+            font-weight: bold;
+          }
+          &:nth-child(2) {
+            font-weight: normal;
+            color: grey;
+          }
         }
       }
     }

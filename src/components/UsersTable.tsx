@@ -29,7 +29,7 @@ function UsersTable({ users }: UsersListProps) {
                     <img src={imageUrl} alt={firstName} />
 
                     <div>
-                      {`${lastName}, ${firstName}`}
+                      <p>{`${lastName}, ${firstName}`}</p>
                       <p>{email}</p>
                     </div>
                   </div>
